@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
   "configurations": {
     "client": {
-      "appLocation": ".",
+      "appLocation": "",
       "outputLocation": "build",
       "appBuildCommand": "npm run build",
       "run": "npm start",
