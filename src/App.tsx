@@ -1,20 +1,19 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Layout from './Layout';
 
 function App() {
-  const value = 'static web app ts!';
 
-  useEffect(() => {
-    async function loadForecast() {
-      const response = await fetch("/api/WeatherForecast");
-      const data = await response.json();
-      console.log(data);
-    }
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Layout>
 
-    loadForecast();
-
-  }, []);
-
-  return <div>Hello {value}</div>;
+    </BrowserRouter>)
 }
 
 export default App;
