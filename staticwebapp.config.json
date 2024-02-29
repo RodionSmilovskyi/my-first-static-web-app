@@ -2,7 +2,7 @@
     "routes": [
         {
             "route": "/login",
-            "redirect": "/.auth/login/microsoftaccount?post_login_redirect_uri=/members-only"
+            "redirect": "/.auth/login/aad?post_login_redirect_uri=/members-only"
         },
         {
             "route": "/logout",
