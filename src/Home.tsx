@@ -24,13 +24,13 @@ const Home = () => {
 
     return (
         <Grid container>
-            <Grid xs={12}>
+            <Grid item xs={12}>
                 <Box sx={{ padding: '10px' }}>
                     Weather forecast from Azure service API
                 </Box>
             </Grid>
             {weatherData?.map(wd => (
-                <Grid xs={12}>{`${wd.date} ${wd.temperatureC} ${wd.summary}`}</Grid>
+                <Grid key={wd.date} item xs={12}>{`${wd.date} ${wd.temperatureC} ${wd.summary}`}</Grid>
             ))}
         </Grid>
     )

@@ -1,4 +1,31 @@
 {
+    "routes": [
+        {
+            "route": "/login",
+            "redirect": "/.auth/login/microsoftaccount?post_login_redirect_uri=/members-only"
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout?post_login_redirect_uri=/"
+        },
+        {
+            "route": "/members-only/*",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
+            "route": "/*",
+            "allowedRoles": [
+                "anonymous"
+            ]
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "redirect": "/"
+        }
+    },
     "navigationFallback": {
         "rewrite": "/index.html"
     }
