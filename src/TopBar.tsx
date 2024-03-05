@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 type UserInfo = {
     identityProvider: string,
@@ -33,7 +34,7 @@ const TopBar = () => {
         <Grid container sx={{ backgroundColor: '#007FFF', color: '#FFFFFF' }}>
             <Grid item xs={8}>Top bar</Grid>
             {userInfo && <>
-                <Grid item xs={2}>{userInfo.userDetails}</Grid>
+                <Grid item xs={2}><Link to="user-info">{userInfo.userDetails} info</Link></Grid>
                 <Grid item xs={2}><a href="logout">Logout</a></Grid>
             </>}
             {!userInfo && <Grid item xs={4}><a href="login">Login</a></Grid>}

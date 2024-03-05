@@ -2,14 +2,14 @@
     "routes": [
         {
             "route": "/login",
-            "redirect": "/.auth/login/aad?post_login_redirect_uri=/members-only"
+            "redirect": "/.auth/login/aad?post_login_redirect_uri=/user-info"
         },
         {
             "route": "/logout",
             "redirect": "/.auth/logout?post_login_redirect_uri=/"
         },
         {
-            "route": "/members-only/*",
+            "route": "/user-info/*",
             "allowedRoles": [
                 "authenticated"
             ]

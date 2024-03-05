@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Layout from './Layout';
-import MembersOnly from './MembersOnly';
+import UserInfo from './UserInfo';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/members-only" element={<MembersOnly />} />
+          <Route path="/user-info" element={<UserInfo />} />
         </Routes>
       </Layout>
 
